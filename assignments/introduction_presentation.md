@@ -8,7 +8,7 @@ presentation should include the following elements:
 
 ### Writeup due: Feb 1st
 
-For 2/1, please submit a draft of your introduction in your GitHub repository and bring two hard copies to class. Your draft should cover each of the elements above (to the extent possible). Remember that an introduction is outlining your entire paper, from motivation to
+For 2/1, please submit a draft of your introduction in your GitHub repository and bring two hard copies to class. Your draft should cover each of the elements below (to the extent possible). Remember that an introduction is outlining your entire paper, from motivation to
 a results preview! I am not providing a specific page limit, but I suspect 4-7 pages will be reasonable
 in most cases. I encourage you to re-read several introductions from published economics articles as
 part of your preparation.
