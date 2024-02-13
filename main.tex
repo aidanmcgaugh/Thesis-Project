@@ -1,0 +1,88 @@
+\documentclass[12pt,a4paper]{article}
+% \usepackage[english]{babel}
+% \usepackage[utf8x]{inputenc}
+
+\usepackage{graphicx} % Required for inserting images.
+\usepackage[margin=25mm]{geometry}
+\parskip 4.2pt  % Sets spacing between paragraphs.
+% \renewcommand{\baselinestretch}{1.5}  % Uncomment for 1.5 spacing between lines.
+\parindent 8.4pt  % Sets leading space for paragraphs.
+\usepackage[font=sf]{caption} % Changes font of captions.
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{pdflscape}
+\usepackage{siunitx}
+\usepackage{verbatim}
+\usepackage{hyperref} % Required for inserting clickable links.
+\usepackage{natbib} % Required for APA-style citations.
+\usepackage{setspace}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vspace*{\fill} % Adds vertical space above the title
+    \Large \textbf{What is the impact of fatal car accidents attributable to non-deployed airbags affect the financial dynamics: an examination of the cost of capital and stock price volatility of automobile manufacturing firms, and how do tragic shocks influence the firms' decision-making processes regarding recall initiatives?} \\
+    \vspace{1.5cm} % Space between title and author name
+    \large Aidan McGaugh \\
+    \vspace{1.5cm} % Space between author name and additional details
+    \normalsize Bates College \\
+    Economics \\
+    Bachelor of Arts \\
+    \vspace{1.5cm} % Space before the date
+    \today % or specify a date
+    \vspace*{\fill} % Adds vertical space at the bottom
+\end{titlepage}
+
+\doublespacing
+
+\section{Introduction}
+    \hspace{1cm} Road accidents in the United States involving automobiles land in the eighth spot for leading causes of death for all age groups and are the leading cause of death for individuals aged 5 to 29 (\cite{WHORoadTrafficInjuries}). This is a jarring statistic on its own, but when we look at the number of fatalities that are preventable due to operational failures of the vehicle, the data is staggering. To state the problem more bluntly, in the US, over 5000 people die every year in car accidents where the airbags fail to deploy. By raising Federal and Motor Safety Standards as well as increasing manufacturer investment in research and development for car manufacturing parts, we can lower this number and reduce risks of driving, which not only jeopardizes ones safety but the economic health of this country (\cite{Afghari2020JointModel}). The only way that a manufacturer can be coerced into greater investment and research to prevent these tragic failures is if their financial gains are at risk, and so \textbf{I will examine how incidents of fatal accidents involving non-deployed airbags affect investor sentiment towards automobile manufacturers. To understand this impact, I will be looking at how this shock affects the cost of capital and stock price volatility for automobile manufacturers}. \
+    
+    \hspace{1cm} This study delves into both the financial repercussions of fatal accidents on investor sentiment and the operational choices concerning recall actions, thereby linking the realms of finance and operations management within the sphere of product safety. The insights derived from this investigation could significantly influence regulatory policies related to automotive safety standards and recall processes, providing grounded evidence that might guide the refinement of regulatory oversight to bolster consumer safety. Additionally, for manufacturers, grasping the financial and reputational impacts of safety breaches and understanding the thresholds that trigger recall decisions could lead to more proactive approaches in safety measures and crisis management tactics. Furthermore, this research lays the groundwork for subsequent inquiries into how recalls can be leveraged to rebuild investor trust and enhance product safety, marking a pivotal step towards advancing the domain of product safety research.\
+
+\subsection{Literature Review}
+    \hspace{1cm} Research in the automobile industry has overwhelmingly focused on the implications of product recalls, examining their impact on future product reliability, firm value, and market reactions. \cite{Kalaignanam2013Impact} investigates the effect of recall magnitude on future accidents and product reliability, finding that larger recalls drive improvements in future product safety, influenced by firms' asset sharing and brand quality. Building on this, \cite{Liu2017CrisisManagement} analyzes the long-term impact of recalls on firm value, demonstrating the mitigating role of crisis management strategies and the importance of proactive recall initiation and remedial actions in recovering investor confidence over time. \cite{Rhee2006LiabilityGoodReputation} discusses the reputational risks associated with product recalls, suggesting that a high reputation may increase market penalties when a recall occurs, although specialization and lack of substitutes can buffer these effects. When a recall occurs, \cite{RheeHaunschild2006} examine whether a good reputation helps or hurts a car manufacturer when they  issue a recall using an event study methodology to analyze the stock market response alongside a regression analysis to understand the moderating effects of product substitutability and firm specialization on these market reactions, positing that firms with higher reputations experienced more significant market penalties following product recalls, indicating that a good reputation can act as a liability in these situations.  This means that in my analysis, it is paramount to control for the size and reputation of the company, which can be proxied through the pre-shock stock price. \cite{Chung2003CorporateGovernance} links corporate governance to market valuation post-recalls, emphasizing the positive role of analyst following and board composition in maintaining firm valuation. While existing literature addresses the aftermath of recalls on various fronts as a reactionary measure, a gap persists in understanding how fatal accidents, especially those involving airbag failures, affect a firm’s cost of capital annually and stock price volatility daily which could impact preventative measures. This gap is crucial for assessing market-perceived risk and financing capabilities for safety enhancements. Utilizing a Difference-in-Differences approach with Firm-Specific and Time-Specific fixed effects, this study seeks to isolate the specific financial repercussions of such safety failures, contributing new insights into the economic stakes of product safety in the auto industry. Most significantly, this study aims to provide a methodological framework that can be replicated or adapted in future studies to explore the financial repercussions of various types of corporate crises, especially when it is not broadly publicized (see Methods section for the unique framework). 
+    
+    \hspace{1cm} The direct financial impact of public perception and investor sentiment, especially following incidents of fatal accidents due to product failures, is complex and while one might expect negative events to harm a company's financial standing, quantifying this effect and understanding its mechanisms are not straightforward due to the multitude of factors influencing investor decisions and market reactions. The key economic mechanisms at play include risk perception, which affects the risk premium investors demand; market psychology, where negative news can disproportionately affect investor sentiment; and corporate governance, where perceived weaknesses in a company’s response to crises can alter its financial risk profile. 
+
+
+\subsection{Data}
+    \hspace{1cm} The National Highway Traffic Safety Administration’s Fatality Analysis Reporting System (FARS) has annual reports from 1975 to 2021 for statistics necessary to understand the circumstances and consequences of all traffic accidents involving at least one fatality. This data contains information on whether the airbag was deployed, the make, model, and year of the car(s) involved, as well as information about drug and alcohol presence, whether the driver or passenger was ejected, and the exact time to the minute of the accident. The data from this study is restricted to that of years 2000-2019. The United States Intermodal Surface Transportation Efficiency Act of 1991 required passenger cars and light trucks built after 1 September 1998 to have airbags for the driver and the front passenger so I have allowed for a two year buffer from the passage of this law and I have excluded the 2020 and 2021 data as the performance of the manufacturing company and its cost of capital were likely stifled by the economic impacts of COVID-19. 
+    
+    \hspace{1cm} In order to estimate the effect of fatal car accidents with non-deployed airbags on the cost of capital for the manufacturers, I need to have the cost of debt and cost of equity for the companies. To do this I collected the annual reports (10-K) and quarterly reports (10-Q) filed with the Securities and Exchange Commission (SEC) which provides details on the company's debt levels, interest expenses, and terms of debt. In addition, Moody's, S\&P, and Fitch provide credit ratings that reflect the risk associated with a company's debt. To estimate the cost of equity, I used the Capital Asset Pricing Model (CAPM), which requires the risk-free rate (e.g., yield on 10-year Treasury bonds), the equity beta (a measure of stock volatility relative to the market), and the equity risk premium (the additional return investors demand over the risk-free rate to invest in the stock market). The cost of equity is the expected return that investors require for investing in a particular stock and can be calculated using the formula: $\text{Cost of Equity} = \text{Risk-Free Rate} + \beta \times (\text{Market Return} - \text{Risk-Free Rate})$. I chose to use the cost of capital as a proxy for investor sentiment because it provides a holistic view that takes into account both debt and equity which paints a picture of how the manufacturer is viewed in the capital markets, it is forward looking since cost of capital is based on expectations of future returns and risks, and cost of capital is a quantitative measure that can be tracked over time and compared across firms. With this being said, the the cost of capital can be influenced by a variety of factors beyond investor sentiment towards specific events, such as changes in interest rates, market volatility, or broader economic conditions. For this reason, we are also using stock price volatility to examine how investors react to the occurance of a fatal accident involving a car which does not deploy its airbags. High volatility post-accident could reflect a shift in investor sentiment towards viewing the company as a riskier investment which would likely influence the company's cost of equity, one of the primary components of the cost of capital. Analyzing stock price volatility also allows for an understanding of long-term sentiment shifts and short-term panic reactions as well as a comparative study of firms involved in fatal accidents with those that haven't faced such crises. Data on stock market volatility can be found on Yahoo Finance historical data tab for each manufacturer's stock. 
+
+\subsection{Hypothesis}
+\begin{singlespace}
+    \subsubsection{Cost of Capital Model}
+\begin{align}
+    CostOfCapital_{it} =\ &\alpha + \beta_1 PostAccident_t + \beta_2 Treatment_i + \beta_3 (PostAccident_t \times Treatment_i) \nonumber \\
+    &+ \mathbf{X}_{it}'\mathbf{\beta}_4 + FirmFE_i + TimeFE_t + \epsilon_{it}
+\end{align}
+
+\subsubsection{Stock Price Changes Model}
+\begin{align}
+    StockChange_{it} =\ &\alpha + \beta_1 PostAccident_t + \beta_2 Treatment_i + \beta_3 (PostAccident_t \times Treatment_i) \nonumber \\
+    &+ \mathbf{X}_{it}'\mathbf{\beta}_4 + FirmFE_i + TimeFE_t + \epsilon_{it}
+\end{align}
+\end{singlespace}
+    \hspace{1cm} Considering these theoretical models, I see there to be four potential results that the outcome of these two models would produce. If the $\beta_3$ coefficient (the interaction term) is positive and statistically significant, it would suggest that fatal accidents lead to an increase in the firm's cost of capital. This outcome would imply that the market perceives these firms as riskier investments post-accident, thereby demanding a higher return for providing capital. A non-significant $\beta_3$ coefficient would indicate that fatal accidents do not have a discernible impact on the firm's cost of capital. This could mean that investors believe the accidents are one-off events, that the firm has taken sufficient remedial action, or that other factors are more critical in assessing the firm's risk. If the result is a negative and significant $\beta_3$ coefficient, this would imply that the market's perception of the firm's risk has decreased post-accident which could happen if the accidents lead to regulatory changes, increased safety measures, or other improvements that are seen as enhancing the firm's long-term stability and performance. Finally, The effects on cost of capital might not be uniform across all firms. The model might reveal that certain firm characteristics (e.g., size, market share, or financial health) influence how significantly fatal accidents affect the cost of capital, which is asserted by \cite{RheeHaunschild2006}. \
+    
+    \hspace{1cm} Given previous studies on product recalls and firm value, one might expect a temporary increase in the cost of capital, reflecting the immediate shock and uncertainty post-accident. Over the long term, the effect might be mitigated by firms' actions to restore confidence and improve product safety.
+
+
+
+
+
+
+
+
+
+\clearpage  % Starts a new page for the bibliography
+\bibliographystyle{plain}  % Sets the bibliography style
+\bibliography{example}  % Points to the bibliography file 'example.bib'
+
+\end{document}
+
